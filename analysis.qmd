@@ -3,3 +3,25 @@ title: "Anlysis"
 format: html
 ---
 
+```{r}
+library(HistData)
+```
+
+```{r}
+#| fig-label: figone
+
+data("Galton")
+
+# Check structure to find correct column names
+str(Galton)
+
+# Plot histogram of child's height
+hist(Galton$child, 
+     main = "Histogram of Child Heights (Galton Data)",
+     xlab = "Height (inches)",
+     col = "lightgreen",
+     border = "white",
+     breaks = 20)
+```
+
+Plot is in @figone 
